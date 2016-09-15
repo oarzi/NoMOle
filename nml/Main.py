@@ -1,5 +1,6 @@
 from WorkingPys.CutPic import cut_images
 from WorkingPys.K2means import *
+from WorkingPys.SymetryTest import symetry_test
 
 print("NoMOle - start image processing")
 
@@ -30,15 +31,35 @@ print("cuting benign images")
 
 #########################################################################
 
-print("malignant - color to grey scale")
-input_path = r"C:\Users\ofir arzi\Dropbox\NoMolePic\malignant\malignantcut"
-output_path = r"C:\Users\ofir arzi\Dropbox\NoMolePic\malignant\malignant-grey"
+#print("malignant - color to grey scale")
+#input_path = r"C:\Users\ofir arzi\Dropbox\NoMolePic\malignant\malignantcut"
+#output_path = r"C:\Users\ofir arzi\Dropbox\NoMolePic\malignant\malignant-grey"
+
+#extraxt_mole_grayscale_array(input_path, output_path)
+
+#print("benign - color to grey scale")
+#input_path = r"C:\Users\ofir arzi\Dropbox\NoMolePic\benign\benigncut"
+#output_path = r"C:\Users\ofir arzi\Dropbox\NoMolePic\benign\benign-grey"
+
+#extraxt_mole_grayscale_array(input_path, output_path)
 
 
-extraxt_mole_grayscale_array(input_path, output_path)
+#########################################################################
 
-print("benign - color to grey scale")
-input_path = r"C:\Users\ofir arzi\Dropbox\NoMolePic\benign\benigncut"
-output_path = r"C:\Users\ofir arzi\Dropbox\NoMolePic\benign\benign-grey"
+#input_path = r"C:\Users\ofir arzi\Dropbox\NoMolePic\malignant\malignant-grey"
 
-extraxt_mole_grayscale_array(input_path, output_path)
+#malignant_symvals = symetry_test(input_path)
+#f = open('MalignantSymetryValues.csv', 'a')
+#[(f.write(x + ',' + y + '\n')) for x, y in malignant_symvals]
+
+#print("Malignant symetry values shape:", malignant_symvals.shape)
+
+
+#input_path = r"C:\Users\ofir arzi\Dropbox\NoMolePic\benign\benign-grey"
+
+#benign_symvals = symetry_test(input_path)
+#f = open('BenignSymetryValues.csv', 'a')
+#[(f.write(x + ',' + y + '\n')) for x, y in benign_symvals]
+
+#print("Benign symetry values shape:", benign_symvals.shape)
+
