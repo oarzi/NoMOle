@@ -1,11 +1,19 @@
-import cv2
+from WorkingPys.K2means import k2means_on_array
 
-from WorkingPys.K2means import k2means
+print("NoMOle - start image processing")
 
-pic = 'images\malignant\m1.jpg'
+######################################################################
 
-res2 = k2means(pic)
+print("K2means on malignant moles")
+input_path = r"C:\Users\ofir arzi\Desktop\NoMole\NoMole\nml\images\malignant"
+output_path = r"C:\Users\ofir arzi\Desktop\NoMole\NoMole\nml\images\malignant"
+k2means_on_array(input_path, output_path)
 
-cv2.imshow('res2', res2)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+
+#print("K2means on benign moles")
+#input_path = r"C:\Users\ofir arzi\Dropbox\NoMolePic\benign\benign\\"
+#output_path = r"C\:\\Users\ofir arzi\Dropbox\\NoMolePic\benign\k2m-benign\\"
+#k2means_on_array(input_path, output_path)
+
+#########################################################################
+
