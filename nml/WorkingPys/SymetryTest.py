@@ -34,7 +34,6 @@ def pic_symetry_test(imagepath):
     else:
         right = img[:, round(y0 / 2):y0]
 
-
     flipped = cv2.flip(right, 1)
 
     #print(right.shape)

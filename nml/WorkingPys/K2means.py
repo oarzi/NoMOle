@@ -5,20 +5,20 @@ import concurrent.futures
 from WorkingPys.CreatePicName import create_pic_name
 
 
-def k2means_on_array(input_path, output_path):
+def kmeans_on_array(input_path, output_path, K, tag):
     imgs = os.listdir(input_path)
-    names = [create_pic_name(filename, 'k2m', output_path + '\\')
+    names = [create_pic_name(filename, tag, output_path + '\\')
              for filename in os.listdir(input_path)]
 
     z = zip(names, imgs)
 
-    [k2means(input_path + '\\' + pair[1], pair[0]) for pair in z]
+    [k2means(input_path + '\\' + pair[1], pair[0], K) for pair in z]
 
     return True
 
-def do_k2_means(imgpath, imgname):
+
+def do_k2_means(imgpath, K):
     print(imgpath)
-    print(imgname)
 
     img = cv2.imread(imgpath)
     x, y, z = img.shape  # height X width X RGB
@@ -29,15 +29,15 @@ def do_k2_means(imgpath, imgname):
 
     # define criteria, number of clusters(K) and apply kmeans()
     criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 10, 1.0)
-    K = 2
+
     ret, label, center = cv2.kmeans(z, K, None, criteria, 10, cv2.KMEANS_RANDOM_CENTERS)
     #label: height * width X 1
 
     return ret, label, center
 
 
-def k2means(imgpath, imgname):
-    ret, label, center = do_k2_means(imgpath, imgname)
+def k2means(imgpath, imgname, K):
+    ret, label, center = do_k2_means(imgpath, K)
     img = cv2.imread(imgpath)
 
     # Now convert back into uint8, and make original image
@@ -65,7 +65,7 @@ def extraxt_mole_grayscale_array(input_path, output_path):
 
 
 def extract_mole_grayscale(imagepath, imagename):
-    ret, label, center = do_k2_means(imagepath, imagename)
+    ret, label, center = do_k2_means(imagepath, 2)
 
     img = cv2.imread(imagepath)
     z = img.reshape((-1, 3))

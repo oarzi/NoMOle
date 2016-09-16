@@ -18,26 +18,26 @@ print("cuting benign images")
 
 
 ######################################################################
-#print("K2means on malignant moles")
-#input_path = r"C:\Users\ofir arzi\Dropbox\NoMolePic\malignant\malignantcut"
-#output_path = r"C:\Users\ofir arzi\Dropbox\NoMolePic\malignant\k2m-malignant"
-#k2means_on_array(input_path, output_path)
+print("K2means on malignant moles")
+#input_path = r"C:\Users\ofir arzi\Desktop\NoMole\NoMole\nml\images\malignant"
+#output_path = r"C:\Users\ofir arzi\Desktop\NoMole\NoMole\nml\images\k2m-malignant"
+#kmeans_on_array(input_path, output_path, 2, 'k2m')
 
 
-#print("K2means on benign moles")
+print("K2means on benign moles")
 #input_path = r"C:\Users\ofir arzi\Dropbox\NoMolePic\benign\benigncut"
-#output_path = r"C:\Users\ofir arzi\Dropbox\NoMolePic\benign\k2m-benign"
-#k2means_on_array(input_path, output_path)
+#output_path = r"C:\Users\ofir arzi\Dropbox\NoMolePic\benign\benign-k2m"
+#kmeans_on_array(input_path, output_path, 2, 'k2m')
 
 #########################################################################
 
-#print("malignant - color to grey scale")
+print("malignant - color to grey scale")
 #input_path = r"C:\Users\ofir arzi\Dropbox\NoMolePic\malignant\malignantcut"
 #output_path = r"C:\Users\ofir arzi\Dropbox\NoMolePic\malignant\malignant-grey"
 
 #extraxt_mole_grayscale_array(input_path, output_path)
 
-#print("benign - color to grey scale")
+print("benign - color to grey scale")
 #input_path = r"C:\Users\ofir arzi\Dropbox\NoMolePic\benign\benigncut"
 #output_path = r"C:\Users\ofir arzi\Dropbox\NoMolePic\benign\benign-grey"
 
@@ -50,7 +50,7 @@ print("cuting benign images")
 
 #malignant_symvals = symetry_test(input_path)
 #f = open('MalignantSymetryValues.csv', 'a')
-#[(f.write(x + ',' + y + '\n')) for x, y in malignant_symvals]
+#[(f.write(x + ',' + y + '\n')) for x, y in malignant_symvals] average: 91.21
 
 #print("Malignant symetry values shape:", malignant_symvals.shape)
 
@@ -59,7 +59,27 @@ print("cuting benign images")
 
 #benign_symvals = symetry_test(input_path)
 #f = open('BenignSymetryValues.csv', 'a')
-#[(f.write(x + ',' + y + '\n')) for x, y in benign_symvals]
+#[(f.write(x + ',' + y + '\n')) for x, y in benign_symvals] average: 104.75
 
 #print("Benign symetry values shape:", benign_symvals.shape)
 
+
+##########################################################################
+
+
+###########################################################################
+
+print("K3means on malignant moles")
+#input_path = r"C:\Users\ofir arzi\Desktop\NoMole\NoMole\nml\images\malignant"
+#output_path = r"C:\Users\ofir arzi\Desktop\NoMole\NoMole\nml\images\k3m-malignant"
+#kmeans_on_array(input_path, output_path, 3, 'k3m')
+
+
+print("K3means on benign moles")
+#input_path = r"C:\Users\ofir arzi\Dropbox\NoMolePic\benign\benigncut"
+#output_path = r"C:\Users\ofir arzi\Dropbox\NoMolePic\benign\k2m-benign"
+#kmeans_on_array(input_path, output_path,2)
+
+
+
+#############################################################################
