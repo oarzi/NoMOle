@@ -5,9 +5,9 @@ import concurrent.futures
 from WorkingPys.CreatePicName import create_pic_name
 
 
-def kmeans_on_array(input_path, output_path, K, tag):
+def kmeans_on_array(input_path, output_path, K):
     imgs = os.listdir(input_path)
-    names = [create_pic_name(filename, tag, output_path + '\\')
+    names = [create_pic_name(filename, "k" + str(K) + "m", output_path + '\\')
              for filename in os.listdir(input_path)]
 
     z = zip(names, imgs)

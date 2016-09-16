@@ -5,10 +5,10 @@ import os
 
 def analyze_mole(image_path):
     extract_mole_grayscale(imagepath=image_path,
-                           imagename=r"C:\Users\ofir arzi\Desktop\NoMole\NoMole\nml\images\analyze\temp")
+                           imagename=r"C:\Users\ofir arzi\Desktop\NoMole\NoMole\nml\images\analyze\temp.jpg")
 
-    symval = pic_symetry_test(r"C:\Users\ofir arzi\Desktop\NoMole\NoMole\nml\images\analyze\temp")
+    symval = pic_symetry_test(r"C:\Users\ofir arzi\Desktop\NoMole\NoMole\nml\images\analyze\temp.jpg")
 
-    os.remove(r"C:\Users\ofir arzi\Desktop\NoMole\NoMole\nml\images\analyze\temp")
+    #os.remove(r"C:\Users\ofir arzi\Desktop\NoMole\NoMole\nml\images\analyze\temp")
 
     return abs(symval - 91.21) > abs(symval - 104.75)
