@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+    <!-- Your styles -->
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body>
+    <!-- Add your site or app content here -->
+    <div class="mdl-layout mdl-js-layout">
+      <header class="mdl-layout--fixed-header">
+            <div class="mdl-layout-icon"></div>
+            <div class="mdl-layout__header-row main-header">
+                <span class="mdl-layout__title">Camera</span>
+            </div>
+            <div class="mdl-layout-spacer"></div>
+      </header>
+      <main class="mdl-layout__content">
+        <!--<div class="mdl-grid">
+          <div id="photograph" class="mdl-cell mdl-cell--2-col mdl-cell--4-col-phone">PHOTOGRAPH YOUR MOLE</div>
+          <div id="appointment" class="mdl-cell mdl-cell--2-col mdl-cell--4-col-phone">MAKE APPOINTMENT</div>
+          <div id="history" class="mdl-cell mdl-cell--2-col mdl-cell--4-col-phone">YOUR HISTORY</div>
+          <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-phone"> 
+            <button class="mdl-button mdl-js-button mdl-button--raised">
+              Button1
+            </button>
+            <button class="mdl-button mdl-js-button mdl-button--raised">
+              Button2
+            </button>
+          </div>
+        </div> -->
+        <div class="camera">
+          <video id="video">Video stream not available.</video>
+        </div>
+        <canvas id="canvas" width="0" height="0">
+        </canvas>
+        <div class="output">
+          <img id="photo" alt="">
+        </div>
+        <div id="buttensPicture">
+          <button id="cancelPicture" class="mdl-button mdl-js-button mdl-button--raised">
+                Cancel
+            </button>
+            <button id="nextPicture" class="mdl-button mdl-js-button mdl-button--raised">
+                Next
+          </button>
+        </div>
+        <button id="backHome" onclick="location.href = 'http://192.168.0.59:8080';" class="mdl-button mdl-js-button mdl-button--raised">
+              Back
+        </button>
+        <button id="startbutton" class="mdl-button mdl-js-button mdl-button--raised">
+              Take photo
+        </button>
+        </div>
+      </main>
+    </div>
+
+
+    <!--<script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>-->
+    <script src="scripts/metrial1.0.6.js"></script>
+
+    <!-- build:js scripts/main.min.js -->
+    <script src="scripts/camera.js"></script>
+    <!-- endbuild -->
+    <!-- Built with love using Web Starter Kit -->
+  </body>
+</html>
